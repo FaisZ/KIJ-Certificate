@@ -29,10 +29,13 @@ public class RSA {
     public static KeyFactory fact;
     public static RSAPrivateCrtKeySpec kspec;
     
-    
-    public RSA(String in) throws NoSuchAlgorithmException, InvalidKeySpecException
-    {
-            this.input = in;
+        public static void main (String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException
+        { 
+            
+            System.out.println("Masukkan inputanmu:");
+            Scanner scn = new Scanner(System.in);
+            RSA.input = scn.nextLine();
+            
             KeyPairGenerator key = KeyPairGenerator.getInstance("RSA");
             key.initialize(512);
             KeyPair keyPair = key.generateKeyPair();
@@ -42,15 +45,19 @@ public class RSA {
             
             fact = KeyFactory.getInstance("RSA");            
             kspec = fact.getKeySpec(priKey, RSAPrivateCrtKeySpec.class);
-            
-            
+                        
             cipher = encrypt(input, pubKey);
             plain = decrypt(cipher, priKey);
-            //System.out.println("Setelah dekripsi (plain): " +plain);
-    }
-    
-        public static void main (String[] args)
-        { 
+            
+            System.out.println("Ciphertext kamu: "+getCipher());
+            System.out.println("Setelah dekripsi: "+getPlain());
+            System.out.println("Public key kamu: "+getPubKey());
+            System.out.println("Private key kamu: "+getPriKey());
+            System.out.println("Eksponen P: "+getExponenP());
+            System.out.println("Eksponen Q: "+getExponenQ());
+            System.out.println("Modulus: "+getModulus());
+            System.out.println("Private eksponen: "+getPrivateExp());
+            System.out.println("Public eksponen: "+getPublicExp());
         }    
         
         public static byte[] encrypt(String text, PublicKey pub) {
