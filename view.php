@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -52,10 +53,10 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                        	<form method="POST" action="<?php echo current_url()?>" role="form">
+                        	<form method="POST" action="CSR_Gen_for_user.php" role="form">
                         		<div class="form-group">
                         			<label>Nama Perusahaan</label>
-                        			<input class="form-control" name="nama_pasien">
+                        			<input class="form-control" name="nama_perusahaan">
                         		</div>
                         		<div class="form-group">
                         			<label>Alamat Perusahaan</label>
