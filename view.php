@@ -55,24 +55,40 @@
                         <div class="col-md-12">
                         	<form method="POST" action="CSR_Gen_for_user.php" role="form">
                         		<div class="form-group">
-                        			<label>Nama Perusahaan</label>
-                        			<input class="form-control" name="nama_perusahaan">
+                        			<label>Negara</label>
+                        			<select class="form-control" name="negara">
+                        			<option value="">Pilih...</option>
+                        			<option value="US">Amerika Serikat</option>
+                        			<option value="BR">Brazil</option>
+                        			<option value="ID">Indonesia</option>
+                        			<option value="JP">Jepang</option>
+                        			<option value="CA">Kanada</option>
+                        			<option value="ZM">Zambia</option>
+                        			</select>
                         		</div>
                         		<div class="form-group">
-                        			<label>Alamat Perusahaan</label>
-                        			<input class="form-control" name="alamat">
+                        			<label>Provinsi</label>
+                        			<input class="form-control" name="prov">
                         		</div>
                         		<div class="form-group">
-                        			<label>Email Perusahaan</label>
+                        			<label>Kota</label>
+                        			<input class="form-control" name="kota">
+                        		</div>
+								<div class="form-group">
+                        			<label>Nama Organisasi</label>
+                        			<input class="form-control" name="org">
+                        		</div>
+								<div class="form-group">
+                        			<label>Unit Organisasi</label>
+                        			<input class="form-control" name="unit">
+                        		</div>
+								<div class="form-group">
+                        			<label>Nama</label>
+                        			<input class="form-control" name="nama">
+                        		</div>
+								<div class="form-group">
+                        			<label>Email</label>
                         			<input class="form-control" name="email">
-                        		</div>
-								<div class="form-group">
-                        			<label>Website</label>
-                        			<input class="form-control" name="web">
-                        		</div>
-								<div class="form-group">
-                        			<label>Public Key</label>
-                        			<input class="form-control" name="key">
                         		</div>
                         		<div class="form-group pull-right" role="group">
 	                        		<button class="btn btn-success" type="submit" name="update">Make It</button>
