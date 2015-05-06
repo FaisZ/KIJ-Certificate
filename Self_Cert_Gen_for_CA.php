@@ -7,8 +7,20 @@
 
 	<?php
 	
-//	$usercsr = readfile
+	//upload file to server
+	$target_dir = "C:\xampp\htdocs\KIJ-Certificate";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+	// Allow certain file formats
+	if($FileType != "csr") {
+    echo "Sorry, only CSR file are allowed.";
+    $uploadOk = 0;
 	
+	
+	$usercsr = 'C:\xampp\htdocs\KIJ-Certificate\Certificate.crt';
+
 	$CAdataarr = array(
     "countryName" => "INA",
     "stateOrProvinceName" => "Jawa Timur",
