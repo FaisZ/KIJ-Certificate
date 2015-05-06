@@ -53,7 +53,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                        	<form method="POST" action="Self_Cert_Gen_for_CA.php" role="form">
+                        	<form method="POST" action="CSR_Gen_for_user.php" role="form">
                         		<div class="form-group">
                         			<label>Negara</label>
                         			<select class="form-control" name="negara">
@@ -89,6 +89,21 @@
 								<div class="form-group">
                         			<label>Email</label>
                         			<input class="form-control" name="email">
+                        		</div>
+                        		<div class="form-group">
+                        			<label>Kunci Publik</label>
+                        			<input class="form-control" name="pubkey">
+                        		</div>
+                        		<div class="form-group">
+                        			<label>Durasi</label>
+                        			<select class="form-control" name="durasi">
+                        			<option value="">Pilih...</option>
+                        			<option value="365">1 Tahun</option>
+                        			<option value="730">2 Tahun</option>
+                        			<option value="1095">3 Tahun</option>
+                        			<option value="1460">4 Tahun</option>
+                        			<option value="1825">5 Tahun</option>
+                        			</select>
                         		</div>
                         		<div class="form-group pull-right" role="group">
 	                        		<button class="btn btn-success" type="submit" name="update">Make It</button>

@@ -53,47 +53,19 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                        	<form method="POST" action="Self_Cert_Gen_for_CA.php" role="form">
-                        		<div class="form-group">
-                        			<label>Negara</label>
-                        			<select class="form-control" name="negara">
-                        			<option value="">Pilih...</option>
-                        			<option value="US">Amerika Serikat</option>
-                        			<option value="BR">Brazil</option>
-                        			<option value="ID">Indonesia</option>
-                        			<option value="JP">Jepang</option>
-                        			<option value="CA">Kanada</option>
-                        			<option value="ZM">Zambia</option>
-                        			</select>
-                        		</div>
-                        		<div class="form-group">
-                        			<label>Provinsi</label>
-                        			<input class="form-control" name="prov">
-                        		</div>
-                        		<div class="form-group">
-                        			<label>Kota</label>
-                        			<input class="form-control" name="kota">
-                        		</div>
-								<div class="form-group">
-                        			<label>Nama Organisasi</label>
-                        			<input class="form-control" name="org">
-                        		</div>
-								<div class="form-group">
-                        			<label>Unit Organisasi</label>
-                        			<input class="form-control" name="unit">
-                        		</div>
-								<div class="form-group">
-                        			<label>Nama</label>
-                        			<input class="form-control" name="nama">
-                        		</div>
-								<div class="form-group">
-                        			<label>Email</label>
-                        			<input class="form-control" name="email">
-                        		</div>
-                        		<div class="form-group pull-right" role="group">
-	                        		<button class="btn btn-success" type="submit" name="update">Make It</button>
-                        		</div>
-                        	</form>
+                        <form method="POST" action="login_to.php" role="form">
+                        	<div class="form-group">
+                    			<label>Username</label>
+                    			<input class="form-control" name="user">
+                    		</div>
+                    		<div class="form-group">
+                    			<label>Password</label>
+                    			<input type="password" class="form-control" name="pass">
+                    		</div>
+                    		<div class="form-group pull-right" role="group">
+                        		<button class="btn btn-success" type="submit" name="update">Login</button>
+                    		</div>
+                        </form>
                        	</div>
                     </div>
                     <!-- /. ROW  -->
