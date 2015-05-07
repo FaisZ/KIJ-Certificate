@@ -4,7 +4,7 @@
 	session_start();
 	if (isset($_SESSION["username"]))
 	{
-		if ($_SESSION["username"]!="admin")
+		if ($_SESSION["username"]=="admin")
 		{
 			header('location: login.php');
 		    exit;
