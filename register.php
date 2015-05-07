@@ -50,67 +50,41 @@
 	                </button>
 	                <a class="navbar-brand" href="#">ZOLCERT</a> 
 	            </div>
-	            <div style="color: white;
-	                padding: 15px 50px 5px 50px;
-	                float: right;
-	                font-size: 16px;"><a href="logout.php" class="btn btn-danger square-btn-adjust">Logout</a> 
-	            </div>
-
 			</nav>
 			<div id="page-wrapper">
 				<div id="page-inner">
 
 					<div class="row">
 	                    <div class="col-md-12">
-	                     	<h2>Pembuatan Certificate Authority</h2>
+	                     	<h2>Register</h2>
 	                    </div>
 	                </div>
 	                <!-- /. ROW  -->
                     <hr />
-
+                    <?php
+					   if(isset($_GET['status']) && $_GET['status']=="gagal")
+					   {
+					   	echo "<div class='alert alert-dismissable alert-danger' style='width:900px; margin-left:200px;'>
+						<button type='button' class='close' data-dismiss='alert'>&times;</button>
+						<b>Registrasi gagal!</b>
+						</div>";
+					   }
+					?>
                     <div class="row">
                         <div class="col-md-12">
-                        	<form method="POST" action="Self_Cert_Gen_for_CA.php" role="form">
-                        		<div class="form-group">
-                        			<label>Negara</label>
-                        			<select class="form-control" name="negara">
-                        			<option value="">Pilih...</option>
-                        			<option value="US">Amerika Serikat</option>
-                        			<option value="BR">Brazil</option>
-                        			<option value="ID">Indonesia</option>
-                        			<option value="JP">Jepang</option>
-                        			<option value="CA">Kanada</option>
-                        			<option value="ZM">Zambia</option>
-                        			</select>
-                        		</div>
-                        		<div class="form-group">
-                        			<label>Provinsi</label>
-                        			<input class="form-control" name="prov">
-                        		</div>
-                        		<div class="form-group">
-                        			<label>Kota</label>
-                        			<input class="form-control" name="kota">
-                        		</div>
-								<div class="form-group">
-                        			<label>Nama Organisasi</label>
-                        			<input class="form-control" name="org">
-                        		</div>
-								<div class="form-group">
-                        			<label>Unit Organisasi</label>
-                        			<input class="form-control" name="unit">
-                        		</div>
-								<div class="form-group">
-                        			<label>Nama</label>
-                        			<input class="form-control" name="nama">
-                        		</div>
-								<div class="form-group">
-                        			<label>Email</label>
-                        			<input class="form-control" name="email">
-                        		</div>
-                        		<div class="form-group pull-right" role="group">
-	                        		<button class="btn btn-success" type="submit" name="update">Make It</button>
-                        		</div>
-                        	</form>
+                        <form method="POST" action="daftar.php" role="form">
+                        	<div class="form-group">
+                    			<label>Username</label>
+                    			<input class="form-control" name="user">
+                    		</div>
+                    		<div class="form-group">
+                    			<label>Password</label>
+                    			<input type="password" class="form-control" name="pass">
+                    		</div>
+                    		<div class="form-group pull-right" role="group">
+                    			<button class="btn btn-success" type="submit" name="update">Register</button>
+                    		</div>
+                        </form>
                        	</div>
                     </div>
                     <!-- /. ROW  -->
