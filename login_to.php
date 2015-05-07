@@ -17,9 +17,9 @@ if ($res->num_rows == 0) {
 	$_SESSION["username"]=$user;
 
 	if ($user == "admin") {
-		header('location: view.php');
+		header('location: beranda.php');
 	} else {
-		header('location: view_user.php');
+		header('location: beranda_user.php');
 	}
 }
 
