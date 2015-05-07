@@ -69,7 +69,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-							<button>Melakukan Verifikasi CSR</button>
+							<a href="olah_csr.php"><button>Mengolah CSR</button></a>
 							<a href="view.php"><button>Membuat Sertifikat Sendiri</button></a>
                        	</div>
                     </div>
