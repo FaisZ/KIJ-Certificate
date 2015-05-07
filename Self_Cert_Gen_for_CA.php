@@ -2,7 +2,7 @@
 	<?php
 	
 	//upload file to server
-	$target_dir = "C:\xampp\htdocs\KIJ-Certificate";
+	$target_dir = "C:/xampp/htdocs/KIJ-Certificate";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -31,7 +31,7 @@
 	$CAcsr = openssl_csr_new($CAdataarr, $CApk);
 	
 	//Create self-signed certificate for CA
-	$CAcert = openssl_csr_sign($CAcsr, null, $CApk, 365);
+	$CAcert = openssl_csr_sign($CAcsr, null, $CApk, 3650);
 
 	//Sign user's CSR into a CERT
 	//$usercert = openssl_csr_sign($Usercsr, $CAcert, $CAprivkey, 365);
@@ -46,7 +46,7 @@
 	
 	// Show any errors that occurred here
 	while (($e = openssl_error_string()) !== false) {
-		//echo $e . "\n";
+		echo $e . "\n";
 	}
 
 	?>
