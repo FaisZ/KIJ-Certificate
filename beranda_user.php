@@ -78,7 +78,7 @@
 
 					<div class="row">
 	                    <div class="col-md-12">
-	                     	<h2>Selamat datang <?php echo "admin"?> di ZolaCert</h2>
+	                     	<h2>Selamat datang <?php echo $_SESSION["username"];?> di ZolaCert</h2>
 	                    </div>
 	                </div>
 	                <!-- /. ROW  -->
